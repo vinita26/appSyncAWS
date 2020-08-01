@@ -1,17 +1,20 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-sudo npm i -g @aws-amplify/cli 
-amplify configure 
-amplify init   
--> amplify add auth -> choose default config -> amplify push
--> amplify add storage  -> choose content -> and all default -> auth and guest => auth(create/update), guest(read) -> 
-apmlify push    
+## sudo npm i -g @aws-amplify/cli 
+## amplify configure 
+## amplify init   
+## amplify add auth 
+-> choose default config -> amplify push
+## amplify add storage
+  -> choose content -> and all default -> auth and guest => auth(create/update), guest(read) -> 
+## apmlify push    
 
--> amplify add api -> choose GraphQL -> Default -> amazon Cognito User Pool -> default -> default -> yes -> schema.graphql
+## amplify add api 
+-> choose GraphQL -> Default -> amazon Cognito User Pool -> default -> default -> yes -> schema.graphql
 
-docker build -t aws-react-graphql .  
-docker images  
-Docker tag aws-react-graphql vinita26/aws-react-graphql
-docker push vinita26/aws-react-graphql  
+## docker build -t aws-react-graphql .  
+## docker images  
+## docker tag aws-react-graphql vinita26/aws-react-graphql
+## docker push vinita26/aws-react-graphql  
 
 ## Available Scripts
 
