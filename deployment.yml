@@ -1,0 +1,33 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: aws-amplify-graphql
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aws-amplify-graphql
+  template:
+    metadata:
+      labels:
+        app: aws-amplify-graphql
+    spec:
+      containers:
+        - name: aws-amplify-graphql
+          image: docker.io/arunstiwari/aws-amplify-graphql
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+      restartPolicy: Always
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: aws-amplify-graphql
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: aws-amplify-graphql
